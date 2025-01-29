@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora el multiverso de Rick and Morty con información de personajes, episodios y más.">
+    <meta name="author" content="Tu Empresa">
+    <meta name="keywords" content="Rick and Morty, Multiverso, Personajes, Episodios">
+    <title>PCC</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <h1 class="logo">PCC</h1>
+        </nav>            
+
+        <div class="header-content">
+            <div class="texto-header">
+                <h1>Tu Portal al Multiverso de Rick and Morty</h1> 
+                <p>Explora personajes, episodios y mundos de la serie más alocada del universo. Desde los universos paralelos hasta las aventuras más inesperadas, encontrarás toda la información sobre esta fascinante serie en un solo lugar. ¿Estás listo para la próxima aventura? ¡Haz clic y explora!</p>
+                <a href="#personajes" class="cta-button">Ir</a>
+            </div>
+
+            <div class="imga-header">
+                <img class="img" src="/img/pngimg.com - rick_morty_PNG35.png" alt="Rick and Morty">
+            </div>
+        </div>
+    </header>
+
+    <section id="personajes" class="personajes">
+        <h1 class="title">Personajes</h1>
+        <p class="description">Filtra tu búsqueda para un mejor resultado.</p>
+    
+        <div class="filters">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Busca por nombre o especie..."
+                class="search-bar"
+            />
+            <select id="statusFilter" class="dropdown">
+                <option value="">Estado (Todos)</option>
+                <option value="alive">Alive</option>
+                <option value="dead">Dead</option>
+                <option value="unknown">Unknown</option>
+            </select>
+        </div>
+
+        <p id="no-results" class="no-results hidden">No se encontraron resultados.</p>
+    
+        <div class="personajes-container"></div>
+    
+        <div class="pagination">
+            <button id="prevPage" class="pagination-button">Anterior</button>
+            <span id="pageNumbers" class="pagination-numbers"></span>
+            <button id="nextPage" class="pagination-button">Siguiente</button>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal hidden" id="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="" alt="Imagen del Personaje" class="modal-image" id="modal-image">
+            <h3 id="modal-name"></h3>
+            <p id="modal-status"></p>
+            <p id="modal-species"></p>
+            <p id="modal-origin"></p>
+        </div>
+    </div>
+
+    <section class="footer">
+        <div class="footer-container">
+            <p>&copy; 2024 PCC. Todos los derechos reservados.</p>
+            <nav>
+                <a href="https://rickandmortyapi.com/">API Reference</a>
+                <img src="/img/pngimg.com - rick_morty_PNG42.png" alt="">
+            </nav>
+        </div>
+    </section>    
+    
+    <script src="/arc_js/principal.js"></script>
+</body>
+</html>
